@@ -17,7 +17,7 @@ static class Solution {
 public class count_SubArraysWithXor_K {
     public static void main(){
         ArrayList<Integer> testcase = {4, 2, 2, 6, 4};
-        int expected = 6;
+        int expected =6;
         int result = Solution.count_SubArraysWithXor_K(testcase, 6);
         System.out.println(result);
     }

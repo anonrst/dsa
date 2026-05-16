@@ -7,6 +7,8 @@ macro_rules! solutionClass {
 
 struct Solution {}
 
+
+
 impl Solution {
     fn subArraywith0sum(&self,nums: Vec<i32>) -> i32 {
         let mut total = 0;

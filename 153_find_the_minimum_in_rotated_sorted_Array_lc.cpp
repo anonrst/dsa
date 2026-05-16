@@ -12,8 +12,10 @@ public:
             int mid = low + (high - low)/2;
             if(nums[mid] > nums[high]){
                 low = mid + 1;
-            }else{
+            }else if(nums[mid] < nums[right]){
                 high  = mid;
+            }else{
+                high--;
             }
         }
         return nums[low];         
