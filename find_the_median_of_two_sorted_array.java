@@ -2,22 +2,31 @@ class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int m = nums1.length;
         int n = nums2.length;
-        boolean isEven = false;
-        if((m + n ) % 2 == 0) isEven = true;
-        int[] medianIndex = {(m+n)/2};
-        if(isEven){
-            medianIndex[1] =  ((m+n)/2) + 1;
-        }
-        if(nums1[m - 1] < nums2[0]){
-            if(!isEven){
-                int OddMedianIndex = medianIndex[0];
-                if(OddMedianIndex >= m){
-                    return nums2[OddMedianIndex - m];
-                }else{
-                    return  (nums2[OddMedianIndex - m] + nums2[OddMedianIndex - m + 2]) /2;
-                }
+
+        int total = m+ n;
+        int median2 = total /2;
+        int median1 = median2 - 1;
+
+        int i = 0;
+        int j = 0;
+        int index = 0;
+        
+        int curr = 0;
+        int prev = 0;
+        while(index <= median2){
+            prev = curr;
+            if(i < m && (j >= n ||(nums1[i] <= nums2[j])) ){
+                curr = nums1[i++];
+            }else{
+                curr = nums2[j++];
             }
+            index++;
         }
+
+        if(total % 2 == 1){
+            return curr;
+        }
+        return (prev + curr) /2.00;
     }
 }
 
