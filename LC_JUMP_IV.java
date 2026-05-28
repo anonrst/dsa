@@ -43,7 +43,7 @@ class Solution {
 }
 
 
-public class LC_JUMP_1V  {
+public class LC_JUMP_IV  {
 
     public static void main(String[] args) {
         int[] testcase = {1, 2, 3, 4,5,1, 2};

@@ -29,7 +29,7 @@ class Solution {
     }
 }
 
-public class find_the_smalles_divisor_given_a_threshHold {
+public class FIND_THE_SMALLES_DIVISOR_GIVEN_A_THRESHHOLD {
 
     public static void main(String[] args) {
         int[] testcase = {1,2,5,9};

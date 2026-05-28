@@ -16,7 +16,7 @@ class Solution {
     }
 
 }
-public class maximum_sum_circular_subarray_lc {
+public class MAXIMUM_SUM_CIRCULAR_SUBARRAY_LC {
 
     public static void main(String[] args) {
         int[] test = {1,-2,3,-2};

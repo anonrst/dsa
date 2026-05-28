@@ -15,7 +15,7 @@ class Solution {
 }
 
 
-public class check_if_array_is_sorted_or_rotated {
+public class CHECK_IF_ARRAY_IS_SORTED_OR_ROTATED {
 
 public static void main(String[] args) {
     int[] testcase = { 4, 5,6, 1,22,2, 3};

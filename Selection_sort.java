@@ -22,7 +22,7 @@ class Solution {
     }
 }
 
-public class Selection_sort {
+public class SELECTION_SORT {
     public static void main(String[] args) {
         Vector<Integer> testcase = new Vector<Integer>(Arrays.asList(7,8,9,4,6,5,3,2,1,0));
         Vector<Integer> expected = new Vector<Integer>(Arrays.asList(0,1,2,3,4,5,6,7,8,9));

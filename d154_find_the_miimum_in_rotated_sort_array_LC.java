@@ -16,7 +16,7 @@ class Solution {
         return nums[left];
     }
 }
-public class d154_find_the_miimum_in_rotated_sort_array_LC {
+public class D154_FIND_THE_MIIMUM_IN_ROTATED_SORT_ARRAY_LC {
     public static void main(){
         int[] testcase = {3,3,1,3};
         int expected = 1;

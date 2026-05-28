@@ -25,7 +25,7 @@ class Solution {
     };
 }
 
-public class rotating_the_box_lc {
+public class ROTATING_THE_BOX_LC {
     public static void main(String[] args){
         Solution s  = new Solution();
         char[][] testcases = {{'#','.','#'}};

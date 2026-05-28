@@ -39,7 +39,7 @@ class Solution {
         }
 }
 
-public class find_the_length_of_comman_prefix_pair {
+public class FIND_THE_LENGTH_OF_COMMAN_PREFIX_PAIR {
     public static void main(String[] args) {
         Solution s = new Solution();
         int[] testcase1 = {1,10,100};

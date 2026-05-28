@@ -27,7 +27,7 @@ class Solution {
 }
 
 
-public class search_in_rotated_sorted_array {
+public class SEARCH_IN_ROTATED_SORTED_ARRAY {
     public static void main(String[] args) {
         int[] testcase = {4, 5, 6,7,8,9,0,1};
         int result = new Solution().search(testcase, 8);

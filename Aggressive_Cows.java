@@ -40,7 +40,7 @@ class Solution {
     }
 }
 
-public class Aggressive_Cows {
+public class AGGRESSIVE_COWS {
 
     public static void main(String[] args) {
         int[] testcase = {4,2,1,3,6};

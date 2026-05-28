@@ -21,7 +21,7 @@ class Solution {
     }
 }
 
-public class insertion_sort {
+public class INSERTION_SORT {
 
     public static void main(String[] args) {
         Vector<Integer> testcase = new Vector<Integer>(Arrays.asList(7,8,9,4,6,5,3,2,1,0));

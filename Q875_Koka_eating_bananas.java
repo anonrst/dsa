@@ -29,7 +29,7 @@ class Solution {
     }
 }
 
-public class Q875_Koka_eating_bananas {
+public class Q875_KOKA_EATING_BANANAS {
     public static void main(String[] args) {
         int[] piles = { 3, 6, 7, 11 };
         int value = new Solution().minEatingSpeed(piles, 8);

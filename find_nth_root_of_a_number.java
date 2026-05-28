@@ -22,7 +22,7 @@ class Solution {
 }
 
 
-public class find_nth_root_of_a_number {
+public class FIND_NTH_ROOT_OF_A_NUMBER {
     
     public static void main(String[] args) {
         int result = new Solution().NthRoot(4, 16);

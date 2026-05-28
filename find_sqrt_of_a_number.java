@@ -16,7 +16,7 @@ class Solution {
     }
 }
 
-public class find_sqrt_of_a_number {
+public class FIND_SQRT_OF_A_NUMBER {
 
 public static void main(String[] args) {
     double n = new Solution().floorSqrt(15);

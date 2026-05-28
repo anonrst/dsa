@@ -29,7 +29,7 @@ class Solution {
     }
 }
 
-public class find_the_median_of_two_sorted_array {
+public class FIND_THE_MEDIAN_OF_TWO_SORTED_ARRAY {
 
     public static void main(String[] args) {
         int[] m1 = {1, 2};

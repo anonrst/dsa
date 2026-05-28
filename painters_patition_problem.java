@@ -39,7 +39,7 @@
     }
     
 }
-public class painters_patition_problem {
+public class PAINTERS_PATITION_PROBLEM {
 public static void main(String[] args) {
     int[] testcase = {1, 8, 11, 3};
     int timeAPaintersTakesTwoPaintAUnitArea  =1;

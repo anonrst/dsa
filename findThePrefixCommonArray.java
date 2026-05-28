@@ -24,7 +24,7 @@ class Solution {
     }
 }
 
-public class findThePrefixCommonArray {
+public class FINDTHEPREFIXCOMMONARRAY {
     public static void main(String[] args) {
         Solution s = new Solution();
         int[] testcaseA = { 1, 3, 2, 4, 2 };

@@ -36,7 +36,7 @@ class Solution {
     }
 
 }
-public class capacity_to_ship_packages_within_d_days {
+public class CAPACITY_TO_SHIP_PACKAGES_WITHIN_D_DAYS {
 public static void main(String[] args) {
  int[] testcase = {3,2,2,4,1,4};
  int result = new Solution().shipWithinDays(testcase, 3);

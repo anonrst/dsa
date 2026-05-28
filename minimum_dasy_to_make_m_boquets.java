@@ -41,7 +41,7 @@ class Solution {
     }
 }
 
-public class minimum_dasy_to_make_m_boquets {
+public class MINIMUM_DASY_TO_MAKE_M_BOQUETS {
     public static void main(String[] args) {
         int[] testcase = { 7, 7, 7, 7, 12, 7, 7 };
         int resul = new Solution().minDays(testcase, 2, 3);

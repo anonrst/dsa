@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CF_1900A_cover_in_water_800R {
+public class CF_1900A_COVER_IN_WATER_800R {
 public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int numberOfTestcases  = sc.nextInt();

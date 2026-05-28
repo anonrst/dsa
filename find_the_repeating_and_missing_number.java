@@ -1,5 +1,5 @@
 
- class  Solution {
+ class Solution {
     static public int[] findMissingAndRepeatingNumber(int[] nums){
         long n = nums.length;
         long resultSumAB = 0;
@@ -19,7 +19,7 @@
         return new int[]{(int)A, (int)B};
     }
 }
-public class find_the_repeating_and_missing_number {
+public class FIND_THE_REPEATING_AND_MISSING_NUMBER {
     public static void main(String[] args) {
         int[] testcase = {1,2,3,4,6,6};
         int[] expected  ={6,5};
