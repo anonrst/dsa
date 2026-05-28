@@ -1,9 +1,3 @@
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.TreeMap;
-import java.util.Arrays;
-import java.util.Comparator;
-
 class Solution {
     public int minDays(int[] bloomDay, int m, int k) {
         int flowerReuired = m * k;

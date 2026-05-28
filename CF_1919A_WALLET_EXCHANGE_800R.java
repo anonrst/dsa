@@ -13,5 +13,6 @@ public class CF_1919A_WALLET_EXCHANGE_800R {
         System.out.println("Alice");
       }
     }
+    s.close();
   }
 }

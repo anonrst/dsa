@@ -13,6 +13,8 @@ smallestDigit = Math.min(smallestDigit, digit);
 number /= 10;
 }
 System.out.println(smallestDigit);
+    s.close();
+
 }
 }
 }

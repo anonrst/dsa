@@ -22,5 +22,6 @@ public class CF_1919B_PLUS_MINUS_PSLIT_800R {
         System.out.println(resilt);
       }
     }
+        s.close();
   }
 }

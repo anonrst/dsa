@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class CF_2217B_FLIP_THE_BIT_1000R {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
@@ -32,5 +33,7 @@ public class CF_2217B_FLIP_THE_BIT_1000R {
         }
       }
     }
+s.close();
+
   }
 }

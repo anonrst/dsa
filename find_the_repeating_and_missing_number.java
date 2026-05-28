@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.HashMap;
 
  class  Solution {
     static public int[] findMissingAndRepeatingNumber(int[] nums){

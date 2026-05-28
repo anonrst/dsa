@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class CF_2217A_THE_EQUALIZER_100R {
+public class CF_2217A_THE_EQUALIZER_800R {
   public static void main(String[] atgs) {
     Scanner s = new Scanner(System.in);
     int tests = s.nextInt();
@@ -26,5 +26,6 @@ public class CF_2217A_THE_EQUALIZER_100R {
         System.out.println("YES");
       }
     }
+        s.close();
   }
 }

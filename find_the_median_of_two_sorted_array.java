@@ -5,7 +5,6 @@ class Solution {
 
         int total = m+ n;
         int median2 = total /2;
-        int median1 = median2 - 1;
 
         int i = 0;
         int j = 0;
