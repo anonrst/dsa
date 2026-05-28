@@ -5,7 +5,6 @@ public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int numberOfTestcases  = sc.nextInt();
     while (numberOfTestcases-- > 0) {
-        int strLen = sc.nextInt();
         String str  = sc.next();
         if(str.contains("...")){
             System.out.println(2);
@@ -19,6 +18,7 @@ public static void main(String[] args) {
             System.out.println(cpunt);
         }
     }
+    sc.close();
 }
     
 }
