@@ -21,7 +21,6 @@ class Solution {
     for(int i =0;i < stations.length - 1;i++){
       int distanced = stations[i +1] - stations[i];
       int hh = (int)Math.ceil(distanced/distance) - 1;
-      System.out.println(hh);
       addedS += hh;
     }
     return addedS <= k;
@@ -33,7 +32,7 @@ public class A2Z_MINIMIZE_MAX_DISTANCE_TO_GAS_STATION {
   public static void main(String[] args){
     int[] tetscase  = {1, 2, 3, 4, 5, 6 ,7, 8, 9,10};
     double expected = 0.5;
-    double result =new Solution().findMinDist(tetscase,10);
+    double result =Solution.findMinDist(tetscase,10);
     System.out.println(result == expected);
     System.out.println(result);
   }
