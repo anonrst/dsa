@@ -1,69 +1,152 @@
+import java.util.Random;
+
 class Solution {
-    public boolean searchMatrix(int[][] matrix, int target) {
-        int rows = matrix.length;
-        int rowlen = matrix[0].length;
-        int left= 0;
-        int right = rowlen - 1; 
-        int top = 0;
-        int down = rows - 1;
-        while(left <= right && top <= down){
-          int index = left + (right -left)/2;
-          int row = top + ( down - top)/2;
-          int value = matrix[row][index];
-          if(value == target)return true;
-          if(value > target){
-            down = row - 1;
-          }else{u
-            top = row + 1;
-          }
-          if(value > target){
-            right = index - 1;
-          }else{
-            left = index + 1;
-          }
+    public int[] findPeakGrid(int[][] mat) {
+        int len = mat.length - 1;
+        int col = mat[0].length - 1;
+        for (int i = 0; i <= len; i++) {
+            int left = 0;
+            int right = col;
+            while (left < right) {
+                int mid = left + (right - left) / 2;
+                int value = mat[i][mid];
+                if (mid <= col && value < mat[i][mid + 1]) {
+                    left = mid + 1;
+                } else {
+                    right = mid;
+                }
+            }
+            System.out.println("while");
+            int value = mat[i][left];
+            boolean status = true;
+
+            boolean notLastColumn = left < col;
+            boolean notFirstCOlumn = left > 0;
+
+            boolean notLastRow = i < len;
+            boolean notFirstRow = i > 0;
+            // if (notFirstRow) {
+            // if (notFirstCOlumn && value < mat[i - 1][left - 1])
+            // status = false;
+            // if (notLastColumn && value < mat[i - 1][left + 1])
+            // status = false;
+            // }
+            // if (notLastRow) {
+            // if (notFirstCOlumn && value < mat[i + 1][left - 1])
+            // status = false;
+            // if (notLastColumn && value < mat[i + 1][left + 1])
+            // status = false;
+            // }
+            if(status && notFirstCOlumn && value < mat[i][left - 1])status = false;
+            if (status && notFirstRow && (value < mat[i - 1][left]))
+                status = false;
+            if (status && notLastRow && (value < mat[i + 1][left]))
+                status = false;
+            if (status) {
+                return new int[] { i, left };
+            }
         }
-        return false;
+        return new int[] { -1, -1 };
     }
 }
 
 public class lc_search_in_2D_array_II {
+
+    static boolean isPeak(int[][] mat, int[] ans) {
+        int i = ans[0];
+        int j = ans[1];
+
+        int value = mat[i][j];
+
+        if (i > 0 && mat[i - 1][j] >= value)
+            return false;
+
+        if (i < mat.length - 1 && mat[i + 1][j] >= value)
+            return false;
+
+        if (j > 0 && mat[i][j - 1] >= value)
+            return false;
+
+        if (j < mat[0].length - 1 && mat[i][j + 1] >= value)
+            return false;
+
+        return true;
+    }
+
+    static int[][] generateMatrix(int rows, int cols) {
+
+        Random random = new Random();
+
+        int[][] mat = new int[rows][cols];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+
+                int value;
+
+                while (true) {
+                    value = random.nextInt(10000);
+
+                    boolean ok = true;
+
+                    if (i > 0 && mat[i - 1][j] == value)
+                        ok = false;
+
+                    if (j > 0 && mat[i][j - 1] == value)
+                        ok = false;
+
+                    if (ok)
+                        break;
+                }
+
+                mat[i][j] = value;
+            }
+        }
+
+        return mat;
+    }
+
     public static void main(String[] args) {
-        Solution s = new Solution();
 
-        // Test Case 1
-        int[][] m1 = {
-            {1}
-        };
-        System.out.println(s.searchMatrix(m1, 1)); // Expected: true
+        Solution sol = new Solution();
 
-        // Test Case 2
-        int[][] m2 = {
-            {1}
-        };
-        System.out.println(s.searchMatrix(m2, 2)); // Expected: false
+        int[][][] tests = {
 
-        // Test Case 3
-        int[][] m3 = {
-            {1, 3, 5},
-            {7, 9, 11},
-            {13, 15, 17}
-        };
-        System.out.println(s.searchMatrix(m3, 13)); // Expected: true
+                generateMatrix(3, 3),
 
-        // Test Case 4
-        int[][] m4 = {
-            {1, 3, 5},
-            {7, 9, 11},
-            {13, 15, 17}
-        };
-        System.out.println(s.searchMatrix(m4, 2)); // Expected: false
+                generateMatrix(10, 20),
 
-        // Test Case 5
-        int[][] m5 = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+                generateMatrix(50, 50),
+
+                generateMatrix(100, 100),
+
+                generateMatrix(100, 200),
+                {
+                        { 47, 30, 35, 8, 25 },
+                        { 6, 36, 19, 41, 40 },
+                        { 24, 37, 13, 46, 5 },
+                        { 3, 43, 15, 50, 19 },
+                        { 6, 15, 7, 25, 18 }
+                }
+
         };
-        System.out.println(s.searchMatrix(m5, 9)); // Expected: true
+
+        for (int i = 0; i < tests.length; i++) {
+
+            int[] ans = sol.findPeakGrid(tests[i]);
+
+            if (isPeak(tests[i], ans)) {
+
+                System.out.println(
+                        "Test " + (i + 1) +
+                                " PASS -> [" + ans[0] + "," + ans[1] + "]");
+
+            } else {
+
+                System.out.println(
+                        "Test " + (i + 1) +
+                                " FAIL");
+            }
+        }
     }
 }
